@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodica - Band Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #151517;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #151517;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            color: #bbb;
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-color: #151517;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 50%;
+            margin-left: 10px;
+        }
+        .hero-content h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: baseline;
+            justify-content: start;
+        }
+        .hero-content h1 span {
+            background: linear-gradient(to right, #3e6df7, #9b51e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .hero-content h1 .we {
+            margin-right: 15px;
+        }
+        .hero-content h1 .are {
+            margin-right: 15px;
+        }
+        .hero-subtext {
+            margin-top: 10px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #999;
+        }
+
+          .hero-image {
+            position: absolute;
+            right: -28px; 
+            bottom: 20px; 
+            max-height: 90vh;
+            z-index: 1;
+            overflow: hidden; 
+        }
+
+        .hero-image img {
+            width: 1040px; 
+            height: 680px; 
+            object-fit: cover; 
+            padding: 0;
+            padding-bottom: 100px;
+        }
+
+    
+        .footer-icons {
+            position: absolute;
+            bottom: 30px;
+            left: 80%;
+            transform: translateX(-50%);
+            text-align: end;
+            z-index: 2;
+        }
+
+        .footer-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-icons a:hover {
+            color: #f73ee8;
+        }
+        .top-right-icons a {
+            color: #fff;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+        .top-right-icons a:hover {
+            color: #f73ee8;
+        }
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+            .hero-image {
+                position: static;
+                margin: 20px auto;
+                max-width: 100%;
+                overflow: visible;
+            }
+            .hero-image img {
+                width: 100%;
+                height: auto;
+                padding: 0;
+            }
+            .footer-icons {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            .hero-image img {
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+            .footer-icons {
+                position: static;
+                text-align: center;
+                left: 50%;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">MELODICA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Discography</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Videos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="top-right-icons d-none d-lg-block">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-cart-fill"></i></a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1><span class="we">We</span> <span class="are">are</span> Melodica</h1>
+            <p class="hero-subtext">WELCOME TO MELODICA THE BAND<br>OFFICIAL WEBSITE</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/band.jpg" alt="Band Image">
+        </div>
+        <div class="footer-icons">
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">youtube</a>
+        </div>
+        <div class="scroll-down">&darr;</div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
